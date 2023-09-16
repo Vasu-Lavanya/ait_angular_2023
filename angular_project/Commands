@@ -1,0 +1,2 @@
+To run angular on specific port:
+ng serve --port 4000

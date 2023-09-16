@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row mt-2">
+        <div class="col-12">
+            <h1>Products </h1>
+            <!-- <app-cart [receiverMsg]="parentMsg" class="m-5"></app-cart> -->
+                <div class="col-4 d-content" *ngFor="let prod of productsInfo">
+                    <div class="card" style="width: 18rem;" >
+                        <img src="assets/images/mobile.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">{{prod.name}}</h5>
+                        <p class="card-text">{{prod.description}}</p>
+                        <a (click)="addToCart(prod.id)" class="btn btn-primary">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+    </div>
+  </div>
+  

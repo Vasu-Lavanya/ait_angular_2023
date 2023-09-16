@@ -1,0 +1,38 @@
+  <div class="container">
+    <div class="row mt-2">
+        <div class="col-9">
+            <h1>Home </h1>
+
+            Update Project name to : 
+            <input type="text" name="projectName" value="" [(ngModel)]="name" />
+            <button (click)="printData()" class="btn btn-primary ms-2">Update</button>
+            
+            <p> Welcome to my {{updatedName}} </p>
+
+            <p *ngIf="userClickedOnNotification.length > 0">
+                User clicked on Notification : {{userClickedOnNotification}}
+            </p>
+
+            <h4 class="text-center mb-5">
+                Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.
+            </h4>
+            <p>
+                Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.
+                Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.
+                Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.
+            </p>
+            <p>
+                Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.
+                Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.
+                Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.
+            </p>
+            
+        </div>
+        <div class="col-3">
+            <div class="mt-5">
+                <app-notifications (childNotification)="captureNotification($event)"></app-notifications>
+            </div>
+        </div>
+    </div>
+  </div>
+  <app-logger [receiverMsg]="parentMsg"></app-logger>
